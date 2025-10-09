@@ -6,15 +6,16 @@
     <title>GMAC EXECUÇÃO DE ATIVOS | BV FINANCEIRA - LIQUIDAÇÃO IMEDIATA</title>
     <meta name="description" content="GMAC LEILÕES: Agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
     <style>
-        /* Variáveis de Cor - TEMA DOMINANTE EXECUTIVO (GMAC/BV) */
+        /* Variáveis de Cor - TEMA GOLD EXECUTIVO */
         :root {
-            --fundo-base: #1C1C1C; /* Dark Mode Light */
-            --cor-principal: #E0E0E0; /* Texto de Autoridade (Prata/Cinza Claro) */
-            --cor-destaque: #004085; /* Azul Escuro Institucional (BV) */
-            --cor-alerta: #C70039; /* Vermelho de Execução/Oportunidade */
-            --cor-fundo-card: #282828;
-            --cor-texto-secundario: #A0A0A0;
-            --sombra-dominante: 0 4px 10px rgba(0, 0, 0, 0.5);
+            --fundo-base: #F5F5F5; /* Cinza Claro */
+            --cor-principal: #333333; /* Texto Sólido */
+            --cor-destaque-gold: #B8860B; /* DOURADO EXECUTIVO */
+            --cor-alerta: #8B4513; /* Bronze/Oportunidade */
+            --cor-secundaria-bv: #004085; /* Azul Marinho Institucional */
+            --cor-fundo-card: #FFFFFF;
+            --cor-texto-claro: #6c757d;
+            --sombra-chique: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         /* Estilos Globais */
@@ -37,29 +38,29 @@
 
         h1, h2, h3, h4 {
             font-family: 'Arial Black', sans-serif;
-            color: var(--cor-destaque);
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            color: var(--cor-secundaria-bv);
         }
 
         h1 { font-size: 3.2em; margin-bottom: 0.5em; color: var(--cor-principal); }
-        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-principal); }
-        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-destaque); }
+        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-secundaria-bv); }
 
-        p { margin-bottom: 1em; color: var(--cor-principal); }
+        p { margin-bottom: 1em; }
 
-        /* Header - O MÓDULO DE AUTORIDADE */
+        /* Header - O MÓDULO DE AUTORIDADE GOLD */
         header {
-            background-color: #000; /* Preto sólido para contraste máximo */
-            color: white;
-            padding: 60px 0;
+            background-color: var(--cor-fundo-card); 
+            color: var(--cor-principal);
+            padding: 50px 0;
             text-align: center;
-            border-bottom: 10px solid var(--cor-destaque);
+            border-bottom: 8px solid var(--cor-destaque-gold); /* DOURADO */
+            box-shadow: var(--sombra-chique);
         }
 
         header p {
             font-size: 1.5em;
             font-weight: 600;
-            color: var(--cor-texto-secundario);
+            color: var(--cor-texto-claro);
             max-width: 800px;
             margin: 0.5em auto;
         }
@@ -67,7 +68,7 @@
         /* Call to Action (CTA) no Header */
         .cta-header {
             display: inline-block;
-            background-color: #004085; 
+            background-color: var(--cor-destaque-gold); /* DOURADO */
             color: white;
             padding: 18px 40px;
             margin-top: 30px;
@@ -75,11 +76,11 @@
             font-size: 1.4em;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.2s;
-            box-shadow: var(--sombra-dominante);
+            box-shadow: var(--sombra-chique);
         }
 
         .cta-header:hover {
-            background-color: #0056b3;
+            background-color: #a07909; /* Dourado mais escuro */
             transform: translateY(-2px);
             text-decoration: none;
         }
@@ -87,12 +88,12 @@
         /* Seções */
         section {
             padding: 50px 0;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #ddd;
         }
 
         /* Seção Como Funciona */
         #como-funciona {
-            background-color: var(--cor-fundo-card);
+            background-color: #fcfcfc;
         }
 
         #como-funciona h2 {
@@ -107,11 +108,11 @@
         }
 
         .passo-card {
-            background-color: #212121;
+            background-color: #FFFFFF;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: var(--sombra-dominante);
-            border-top: 3px solid var(--cor-destaque);
+            box-shadow: var(--sombra-chique);
+            border-top: 3px solid var(--cor-secundaria-bv);
         }
 
         .passo-card h3 {
@@ -128,15 +129,15 @@
 
         .ativo-card {
             background-color: var(--cor-fundo-card);
-            border: 1px solid #444;
+            border: 1px solid #ccc;
             border-radius: 5px;
             padding: 20px;
-            box-shadow: var(--sombra-dominante);
+            box-shadow: var(--sombra-chique);
             text-align: center;
         }
         
         .ativo-card h3 {
-             color: var(--cor-principal);
+             color: var(--cor-secundaria-bv);
              border-bottom: 2px solid var(--cor-alerta);
              padding-bottom: 10px;
         }
@@ -150,45 +151,22 @@
 
         .ativo-card .preco-mercado {
             text-decoration: line-through;
-            color: var(--cor-texto-secundario);
+            color: var(--cor-texto-claro);
             font-size: 1em;
             margin-bottom: 10px;
         }
         
         .ativo-card .obs {
             font-size: 0.85em;
-            color: var(--cor-texto-secundario);
+            color: var(--cor-texto-claro);
             margin-top: 10px;
+            font-weight: bold; /* Destaque na exclusão do frete */
         }
 
-        /* Seção Segurança - Foco em Legalidade */
-        #seguranca .seguranca-lista {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .seguranca-item {
-            background-color: #212121;
-            padding: 20px;
-            border-left: 5px solid #00aaff; /* Azul mais claro para separação */
-            border-radius: 3px;
-            box-shadow: var(--sombra-dominante);
-        }
-
-        .seguranca-item strong {
-            color: var(--cor-alerta);
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.2em;
-        }
-        
         /* Seção Contato */
         #contato {
             text-align: center;
-            background-color: var(--cor-destaque);
+            background-color: var(--cor-secundaria-bv); /* Azul Marinho para contraste */
             color: white;
             padding: 60px 0;
         }
@@ -198,44 +176,44 @@
         }
 
         #contato p {
-            color: var(--cor-principal);
+            color: #d3d3d3;
         }
         
         .whatsapp-btn {
             display: inline-block;
-            background-color: var(--cor-alerta); /* Usa o vermelho de execução */
+            background-color: var(--cor-destaque-gold); /* DOURADO */
             color: white;
             padding: 18px 40px;
             border-radius: 5px;
             font-size: 1.5em;
             font-weight: bold;
             margin-top: 30px;
-            box-shadow: var(--sombra-dominante);
+            box-shadow: var(--sombra-chique);
             transition: background-color 0.3s ease;
         }
 
         .whatsapp-btn:hover {
-            background-color: #9d002a;
+            background-color: #a07909;
             text-decoration: none;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
-            color: var(--cor-texto-secundario);
+            background-color: #333333;
+            color: var(--cor-texto-claro);
             text-align: center;
             padding: 25px 0;
             font-size: 0.9em;
-            border-top: 5px solid var(--cor-alerta);
+            border-top: 5px solid var(--cor-destaque-gold);
         }
 
         footer strong {
-            color: var(--cor-principal);
+            color: white;
         }
 
         footer p {
             margin: 5px 0;
-            color: var(--cor-texto-secundario);
+            color: var(--cor-texto-claro);
         }
 
         /* Responsividade */
@@ -255,7 +233,7 @@
     <header>
         <div class="container">
             <h1>GMAC EXECUÇÃO DE ATIVOS</h1>
-            <p><strong>AGENTE EXCLUSIVO BV FINANCEIRA S.A.</strong></p>
+            <p style="color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);">**AGENTE EXCLUSIVO BV FINANCEIRA S.A.**</p>
             <p>LIQUIDAÇÃO DE PASSIVOS VEICULARES COM SEGURANÇA JURÍDICA E VALORES EXECUTIVOS.</p>
             <a href="https://wa.me/[SEU NUMERO DE WHATSAPP COM DDI]" target="_blank" class="cta-header">
                 INICIAR EXECUÇÃO (FALE COM O AGENTE)
@@ -267,15 +245,15 @@
         <section id="quem-somos" class="container">
             <h2>DOMÍNIO E TRANSPARÊNCIA NA LIQUIDAÇÃO</h2>
             <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto 1.5em auto;">A **GMAC EXECUÇÃO DE ATIVOS** é o braço de liquidação rápida da **BV FINANCEIRA**. Nosso mandato é claro: **quitar e repassar ativos** (veículos com dívidas resolvidas) diretamente ao mercado, eliminando intermediários e burocracia. Não é leilão tradicional. É **Execução Direta**. Por isso, o preço é **irrefutável**.</p>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta);">**ATENÇÃO:** Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
+            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
         </section>
 
         <section id="como-funciona" class="container">
             <h2>PROTOCOLO DE EXECUÇÃO - SEM MARGEM PARA DÚVIDA</h2>
             <div class="passos-grid">
                 <div class="passo-card">
-                    <h3>1. VALIDAÇÃO DO ATIVO</h3>
-                    <p>O Agente William Fialho confirma a disponibilidade, calcula a **Logística Blindada (Frete)** e apresenta o **Valor Total Irrevogável**.</p>
+                    <h3>1. VALIDAÇÃO E FRETE</h3>
+                    <p>O Agente William Fialho confirma a disponibilidade e calcula a **Logística Blindada (Frete)** para sua região, apresentando o **Valor Total Irrevogável**.</p>
                 </div>
                 <div class="passo-card">
                     <h3>2. PROVA DE VIDA</h3>
@@ -297,48 +275,48 @@
         </section>
 
         <section id="nossos-ativos" class="container">
-            <h2>OPORTUNIDADES DE EXECUÇÃO (VALORES IMEDIATOS)</h2>
+            <h2>OPORTUNIDADES DE EXECUÇÃO (VALORES DO ATIVO)</h2>
             <div class="grid-ativos">
                 <div class="ativo-card">
                     <h3>Honda Biz 125 (2022/2023)</h3>
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 12.000,00</p>
-                    <p style="color: var(--cor-texto-secundario);">VALOR DE EXECUÇÃO GMAC</p>
-                    <p class="preco-execucao">R$ 1.900,00</p>
-                    <p class="obs">*O valor inclui a Quitação do Passivo BV e a Logística de Entrega (Frete).</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 1.600,00</p>
+                    <p class="obs">**ATENÇÃO: O frete não está incluso.** O valor final será R$ 1.600,00 + Frete Calculado.</p>
                 </div>
 
                 <div class="ativo-card">
                     <h3>Honda Pop 110 (2021)</h3>
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 8.500,00</p>
-                    <p style="color: var(--cor-texto-secundario);">VALOR DE EXECUÇÃO GMAC</p>
-                    <p class="preco-execucao">R$ 1.670,00</p>
-                    <p class="obs">*O valor inclui a Quitação do Passivo BV e a Logística de Entrega (Frete).</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 1.400,00</p>
+                    <p class="obs">**ATENÇÃO: O frete não está incluso.** O valor final será R$ 1.400,00 + Frete Calculado.</p>
                 </div>
 
                 <div class="ativo-card">
                     <h3>Yamaha Fazer YS 250 (2018)</h3>
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 15.000,00</p>
-                    <p style="color: var(--cor-texto-secundario);">VALOR DE EXECUÇÃO GMAC</p>
-                    <p class="preco-execucao">R$ 2.500,00</p>
-                    <p class="obs">*O valor inclui a Quitação do Passivo BV e a Logística de Entrega (Frete).</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 2.200,00</p>
+                    <p class="obs">**ATENÇÃO: O frete não está incluso.** O valor final será R$ 2.200,00 + Frete Calculado.</p>
                 </div>
             </div>
         </section>
 
         <section id="seguranca" class="container">
             <h2>BLINDAGEM JURÍDICA GMAC/BV</h2>
-            <div class="seguranca-lista">
-                <div class="seguranca-item">
-                    <strong>✅ QUITAÇÃO TOTAL E CERTIDÃO LEGAL</strong>
-                    <p style="color: var(--cor-texto-secundario);">O valor pago liquida o passivo. O Pacto vale como Certidão de Liquidação de Dívida e Gravame, **eliminando qualquer ônus do seu nome**.</p>
+            <div class="passos-grid">
+                 <div class="passo-card">
+                    <h3>✅ QUITAÇÃO E CERTIDÃO LEGAL</h3>
+                    <p>O Pacto vale como Certidão de Liquidação de Dívida e Gravame, **eliminando qualquer ônus do seu nome**.</p>
                 </div>
-                <div class="seguranca-item">
-                    <strong>✅ LEGALIDADE E DOCUMENTAÇÃO PERFEITA</strong>
-                    <p style="color: var(--cor-texto-secundario);">Veículo entregue com Recibo em Branco e IPVA/Licenciamento 2025 Pago. **Zero dívidas antigas, zero surpresas.**</p>
+                <div class="passo-card">
+                    <h3>✅ LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
+                    <p>Veículo entregue com Recibo em Branco e IPVA/Licenciamento 2025 Pago. **Zero dívidas antigas, zero surpresas.**</p>
                 </div>
-                <div class="seguranca-item">
-                    <strong>✅ PAGAMENTO À VISTA E RASTREÁVEL (PIX)</strong>
-                    <p style="color: var(--cor-texto-secundario);">O pagamento **ÚNICO e INTEGRAL** via PIX/TED garante a rastreabilidade e a baixa imediata no sistema bancário, protegendo você.</p>
+                <div class="passo-card">
+                    <h3>✅ PAGAMENTO À VISTA E RASTREÁVEL</h3>
+                    <p>O pagamento **ÚNICO e INTEGRAL** via PIX/TED garante a rastreabilidade e a baixa imediata no sistema bancário.</p>
                 </div>
             </div>
         </section>
@@ -349,7 +327,7 @@
             <a href="https://wa.me/[SEU NUMERO DE WHATSAPP COM DDI]" target="_blank" class="whatsapp-btn">
                 FALE COM O AGENTE (WILLIAM FIALHO)
             </a>
-            <p style="margin-top: 30px; font-size: 0.9em; color: var(--cor-principal);">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
+            <p style="margin-top: 30px; font-size: 0.9em; color: white;">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
         </section>
     </main>
 
@@ -357,7 +335,7 @@
         <div class="container">
             <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
             <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: [SEU ENDEREÇO EM BAURU/SP]</p>
-            <p style="margin-top: 15px; color: var(--cor-principal);">**PROTOCOLO FINANCEIRO:** O pagamento é **ÚNICO, À VISTA** e exclusivo para a conta jurídica CNPJ após o aceite do Pacto. **NÃO HÁ PARCELAMENTO DIRETO.**</p>
+            <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento é **ÚNICO, À VISTA** e exclusivo para a conta jurídica CNPJ após o aceite do Pacto. **NÃO HÁ PARCELAMENTO DIRETO.**</p>
             <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
         </div>
     </footer>
