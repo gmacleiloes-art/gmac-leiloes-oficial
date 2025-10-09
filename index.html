@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAC LEILÕES | Agente de Execução BV Financeira - Ativos Quitado e Legalizado</title>
+    <meta name="description" content="GMAC LEILÕES: Agente oficial de execução financeira da BV Financeira. Oportunidades exclusivas de veículos quitados, legalizados e sem dívidas. Processo 100% seguro e transparente.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght=400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Variáveis de Cor */
+        :root {
+            --cor-principal: #004085; /* Azul Escuro Institucional */
+            --cor-secundaria: #007bff; /* Azul BV padrão */
+            --cor-terciaria: #d4edda; /* Verde claro para sucesso/segurança */
+            --cor-alerta: #dc3545; /* Vermelho para destaque de preço */
+            --cor-fundo: #f8f9fa; /* Fundo claro */
+            --cor-texto: #343a40; /* Texto escuro */
+            --cor-texto-claro: #6c757d; /* Texto secundário */
+            --sombra-leve: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-principal);
+        }
+
+        h1 { font-size: 2.8em; margin-bottom: 0.5em; }
+        h2 { font-size: 2.2em; text-align: center; margin-bottom: 1.5em; }
+        h3 { font-size: 1.6em; margin-bottom: 0.8em; color: var(--cor-secundaria); }
+
+        p { margin-bottom: 1em; }
+
+        a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--cor-principal);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 8px solid var(--cor-secundaria);
+        }
+
+        header h1 {
+            color: white;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.3em;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Call to Action (CTA) no Header */
+        .cta-header {
+            display: inline-block;
+            background-color: #28a745; /* Verde de sucesso */
+            color: white;
+            padding: 15px 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: var(--sombra-leve);
+        }
+
+        .cta-header:hover {
+            background-color: #218838;
+            text-decoration: none;
+        }
+
+        /* Seções */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Seção Quem Somos */
+        #quem-somos p {
+            text-align: center;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 1em auto;
+        }
+
+        /* Seção Como Funciona */
+        #como-funciona .passos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .passo-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--sombra-leve);
+            transition: transform 0.3s ease;
+        }
+
+        .passo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .passo-card .icone {
+            font-size: 2.5em;
+            color: var(--cor-secundaria);
+            margin-bottom: 15px;
+        }
+
+        /* Seção Ativos */
+        #nossos-ativos .grid-ativos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .ativo-card {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--sombra-leve);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .ativo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ativo-card .preco-execucao {
+            font-size: 2.2em;
+            color: var(--cor-alerta);
+            font-weight: 700;
+            margin: 15px 0 5px 0;
+        }
+
+        .ativo-card .preco-mercado {
+            text-decoration: line-through;
+            color: var(--cor-texto-claro);
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        
+        .ativo-card .obs {
+            font-size: 0.85em;
+            color: var(--cor-texto-claro);
+            margin-top: 10px;
+        }
+
+        /* Seção Segurança */
+        #seguranca .seguranca-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .seguranca-item {
+            background-color: white;
+            padding: 20px;
+            border-left: 5px solid var(--cor-terciaria);
+            border-radius: 5px;
+            box-shadow: var(--sombra-leve);
+        }
+
+        .seguranca-item strong {
+            color: var(--cor-principal);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+        
+        /* Seção Contato */
+        #contato {
+            text-align: center;
+            background-color: var(--cor-principal);
+            color: white;
+        }
+
+        #contato h2 {
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #28a745; /* Verde WhatsApp */
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 30px;
+            box-shadow: var(--sombra-leve);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #218838;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529; /* Cinza escuro */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            header p { font-size: 1.1em; }
+            .cta-header, .whatsapp-btn { font-size: 1.1em; padding: 12px 25px; }
+            section { padding: 40px 0; }
+            #como-funciona .passos-grid, #nossos-ativos .grid-ativos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>GMAC LEILÕES</h1>
+            <p>Agente de Execução Financeira Oficial da **BV FINANCEIRA S.A.**</p>
+            <p>Sua oportunidade de adquirir veículos quitados, legalizados e com valores exclusivos.</p>
+            <a href="https://wa.me/[SEU NUMERO DE WHATSAPP COM DDI]" target="_blank" class="cta-header">
+                Consulte um Agente Executivo Agora
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="quem-somos" class="container">
+            <h2>Quem Somos:
