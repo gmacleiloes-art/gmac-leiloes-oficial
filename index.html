@@ -216,6 +216,80 @@
             color: var(--cor-texto-claro);
         }
 
+        /* --- ESTILOS DO CARROSSEL DE DEPOIMENTOS --- */
+        .testimonials-carousel-section {
+            padding: 60px 0;
+            background-color: #fcfcfc; /* Fundo alinhado com a seção "como-funciona" */
+            text-align: center;
+        }
+
+        .testimonials-carousel-section h2 {
+            font-size: 2.5em;
+            color: var(--cor-destaque-gold);
+            margin-bottom: 40px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 90%; 
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: var(--sombra-chique);
+            border-radius: 8px;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%; 
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: var(--cor-fundo-card);
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        .carousel-slide img.depoimento-img {
+            max-width: 90%; 
+            height: auto;
+            border-radius: 8px; 
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+            border-radius: 50%; 
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+        /* --- FIM DOS ESTILOS DO CARROSSEL --- */
+
         /* Responsividade */
         @media (max-width: 768px) {
             h1 { font-size: 2.5em; }
@@ -224,6 +298,9 @@
             .cta-header, .whatsapp-btn { font-size: 1.2em; padding: 15px 30px; }
             #como-funciona .passos-grid, #nossos-ativos .grid-ativos {
                 grid-template-columns: 1fr;
+            }
+            .carousel-slide img.depoimento-img {
+                max-width: 100%; 
             }
         }
     </style>
@@ -235,7 +312,7 @@
             <h1>GMAC EXECUÇÃO DE ATIVOS</h1>
             <p style="color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);">**AGENTE EXCLUSIVO BV FINANCEIRA S.A.**</p>
             <p>LIQUIDAÇÃO DE PASSIVOS VEICULARES COM SEGURANÇA JURÍDICA E VALORES EXECUTIVOS.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="cta-header">
+            <a href="https://wa.me/[SEU NUMERO DE WHATSAPP COM DDI]" target="_blank" class="cta-header">
                 INICIAR EXECUÇÃO (FALE COM O AGENTE)
             </a>
         </div>
@@ -320,11 +397,46 @@
                 </div>
             </div>
         </section>
-        
+
+        <section id="depoimentos" class="testimonials-carousel-section">
+            <div class="container">
+                <h2>CLIENTES SATISFEITOS - A PROVA DA NOSSA SEGURANÇA</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435033.jpg" alt="Depoimento de Takashi Watanabe">
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435036.jpg" alt="Depoimento de Fernanda Rodrigues">
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435035.jpg" alt="Depoimento de Marcos Bueno">
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435034.jpg" alt="Depoimento de Bianca Torres">
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435037.jpg" alt="Depoimento de Rafael e Carolina">
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img class="depoimento-img" src="[SUA URL AQUI]/1000435032.jpg" alt="Depoimento de Ricardo Fernandes">
+                        </div>
+                    </div>
+                    <button class="carousel-button prev">&#10094;</button>
+                    <button class="carousel-button next">&#10095;</button>
+                </div>
+            </div>
+        </section>
         <section id="contato" class="container">
             <h2>EXECUÇÃO IMEDIATA É O NOSSO MANDATO</h2>
             <p>As oportunidades são **limitadas pelo estoque de execução**. O Agente William Fialho está pronto para a finalização.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="whatsapp-btn">
+            <a href="https://wa.me/[SEU NUMERO DE WHATSAPP COM DDI]" target="_blank" class="whatsapp-btn">
                 FALE COM O AGENTE (WILLIAM FIALHO)
             </a>
             <p style="margin-top: 30px; font-size: 0.9em; color: white;">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
@@ -334,11 +446,45 @@
     <footer>
         <div class="container">
             <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
-            <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: [SEU ENDEREÇO EM BAURU/SP]</p>
+            <p>Telefone Fixo: <strong>(14) 3197-4294</strong></p>
+            <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: R. Fortunato Resta, 11-35 - Jardim Jussara, Bauru - SP, 17050-040</p>
             <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento é **ÚNICO, À VISTA** e exclusivo para a conta jurídica CNPJ após o aceite do Pacto. **NÃO HÁ PARCELAMENTO DIRETO.**</p>
             <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slidesContainer = document.querySelector('.carousel-slides');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevButton = document.querySelector('.carousel-button.prev');
+            const nextButton = document.querySelector('.carousel-button.next');
+            if (!slidesContainer || slides.length === 0) return; // Evita erro se os elementos não existirem
+
+            let currentSlideIdx = 0;
+
+            function updateCarousel() {
+                const offset = -currentSlideIdx * 100;
+                slidesContainer.style.transform = `translateX(${offset}%)`;
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentSlideIdx = (currentSlideIdx - 1 + slides.length) % slides.length;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentSlideIdx = (currentSlideIdx + 1) % slides.length;
+                updateCarousel();
+            });
+
+            // Opcional: Auto-play do carrossel (descomente se quiser)
+            // setInterval(() => {
+            //     nextButton.click();
+            // }, 5000); // Muda de slide a cada 5 segundos
+
+            updateCarousel(); // Inicializa o carrossel na posição correta
+        });
+    </script>
 </body>
 </html>
