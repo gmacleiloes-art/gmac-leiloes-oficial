@@ -405,7 +405,7 @@
                     </div>
                     <div class="form-group mb-4">
                         <label for="whatsapp">WhatsApp (com DDD):</label>
-                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required>
+                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
                     </div>
                     <button type="submit" class="cta-header w-100">ENVIAR DADOS E INICIAR MINHA EXECUÇÃO</button>
                 </form>
@@ -443,8 +443,8 @@
             const email = document.getElementById('email').value;
             const whatsapp = document.getElementById('whatsapp').value;
 
-            // O link para o WhatsApp de William Fialho
-            const whatsappLinkWilliam = 'https://wa.me/message/T5BFWHRI4QKVA1'; 
+            // NÚMERO DE WHATSAPP DE WILLIAM FIALHO - CORRIGIDO
+            const numeroWilliamFialho = '5511970512149'; 
 
             // Mensagem pré-formatada para enviar ao William Fialho
             const mensagem = `*NOVO CADASTRO DO SITE - CLIENTE INTERESSADO:*\n\n` +
@@ -454,32 +454,16 @@
                              `*Endereço:* ${endereco}\n` +
                              `*CEP:* ${cep}\n` +
                              `*E-mail:* ${email}\n` +
-                             `*WhatsApp:* ${whatsapp}\n\n` +
+                             `*WhatsApp do Cliente:* ${whatsapp}\n\n` +
                              `_Pronto para o Pacto e pagamento total na entrega!_`;
 
             // Codifica a mensagem para URL
             const mensagemCodificada = encodeURIComponent(mensagem);
 
             // Abre o WhatsApp com a mensagem pré-preenchida
-            // ATENÇÃO: Para links wa.me/message/XXXX, a API do WhatsApp não permite adicionar o parâmetro '&text='
-            // diretamente. Se o link for 'wa.me/numero', então o '&text=' funciona.
-            // Para garantir que a mensagem seja enviada, vamos ter que fazer uma pequena adaptação:
-            // Abrir o link 'wa.me/message/' e o William Fialho terá que copiar os dados que o cliente enviou por outro meio.
-            // OU, se você tiver o número direto do William Fialho, podemos usar 'https://api.whatsapp.com/send?phone=NUMERO&text=MENSAGEM'
+            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada}`, '_blank');
             
-            // DADA A URL https://wa.me/message/T5BFWHRI4QKVA1, esta URL é de um CHAT ESPECÍFICO DO WHATSAPP BUSINESS,
-            // e NÃO PERMITE A INSERÇÃO DE TEXTO PRÉ-DEFINIDO VIA PARÂMETRO '&text='.
-            // Portanto, ao clicar no botão "ENVIAR DADOS", o chat será aberto, mas a mensagem
-            // pré-preenchida NÃO será enviada automaticamente por causa da limitação da API para links 'message/'.
-            // O WILLIAM FIAMALHO PRECISARÁ PEDIR OS DADOS NOVAMENTE NO CHAT.
-            // Se você tiver o número de telefone DIRECTO do William Fialho (Ex: 5514991234567),
-            // EU POSSO MUDAR PARA 'https://api.whatsapp.com/send?phone=NUMERO&text=MENSAGEM' para que funcione.
-            // POR ENQUANTO, O FORMULÁRIO ABRIRÁ O CHAT E O WILLIAM FIAMALHO TERÁ QUE SOLICITAR OS DADOS.
-
-            window.open(`${whatsappLinkWilliam}`, '_blank'); // Abre o chat do William Fialho
-
-            // Opcional: Feedback visual para o usuário
-            alert('Seus dados foram enviados e William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra. Ele solicitará os dados da ficha para preenchimento do Pacto.');
+            alert('Seus dados foram enviados! William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra.');
             this.reset(); // Limpa o formulário após o envio
         });
     </script>
