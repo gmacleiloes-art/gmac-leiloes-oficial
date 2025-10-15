@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMAC EXECUÇÃO DE ATIVOS | BV FINANCEIRA - LIQUIDAÇÃO IMEDIATA</title>
     <meta name="description" content="GMAC LEILÕES: Agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
         /* Variáveis de Cor - TEMA GOLD EXECUTIVO */
         :root {
             --fundo-base: #F5F5F5; /* Cinza Claro */
@@ -179,6 +180,33 @@
             margin-top: 0;
         }
 
+        /* Estilos para o formulário */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--cor-secundaria-bv);
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+            font-size: 1em;
+        }
+        .form-control:focus {
+            border-color: var(--cor-destaque-gold);
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.25);
+        }
+        .cta-header.w-100 { /* Ajuste para o botão do form */
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+
         /* Seção Contato */
         #contato {
             text-align: center;
@@ -332,7 +360,7 @@
                 </div>
                 <div class="passo-card">
                     <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
-                    <p>Logística Blindada e rastreável. Você paga o saldo do ativo **somente após a conferência visual na entrega**.</p>
+                    <p>Você paga o saldo do ativo **somente após a conferência visual na entrega**.</p>
                 </div>
             </div>
             
@@ -345,6 +373,44 @@
             </div>
         </section>
 
+        <section id="iniciar-cadastro" class="container">
+            <h2>GARANTA SUA MOTO - CADASTRO RÁPIDO</h2>
+            <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto 2em auto;">Preencha seus dados para que nosso agente William Fialho possa iniciar seu processo e emitir seu Pacto de Execução com o novo protocolo de pagamento (Frete Antecipado + Saldo na Entrega).</p>
+
+            <div class="form-card" style="background-color: var(--cor-fundo-card); padding: 30px; border-radius: 8px; box-shadow: var(--sombra-chique);">
+                <form id="cadastroMotoForm">
+                    <div class="form-group mb-3">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="enderecoCompleto">Endereço Completo (Rua, Nº, Complemento, Bairro, Cidade, Estado):</label>
+                        <input type="text" class="form-control" id="enderecoCompleto" name="enderecoCompleto" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="cep">CEP:</label>
+                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="whatsapp">WhatsApp (com DDD):</label>
+                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(00) 90000-0000" required>
+                    </div>
+                    <button type="submit" class="cta-header w-100">ENVIAR DADOS E INICIAR MINHA EXECUÇÃO</button>
+                </form>
+            </div>
+        </section>
         <section id="contato" class="container">
             <h2>EXECUÇÃO IMEDIATA É O NOSSO MANDATO</h2>
             <p>As oportunidades são **limitadas pelo estoque de execução**. O Agente William Fialho está pronto para a finalização.</p>
@@ -365,5 +431,44 @@
         </div>
     </footer>
 
-    </body>
+    <script>
+        document.getElementById('cadastroMotoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const nome = document.getElementById('nomeCompleto').value;
+            const cpf = document.getElementById('cpf').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const endereco = document.getElementById('enderecoCompleto').value;
+            const cep = document.getElementById('cep').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            // NÚMERO DO WHATSAPP DO WILLIAM FIALHO (com DDI e sem caracteres especiais)
+            // É CRÍTICO QUE VOCÊ COLOQUE O NÚMERO CORRETO AQUI.
+            // Ex: '5514991234567'
+            const numeroWilliam = '[SUBSTITUA_PELO_NUMERO_WHATSAPP_DO_WILLIAM_FIALHO]'; 
+
+            // Mensagem pré-formatada
+            const mensagem = `*NOVO CADASTRO DO SITE - CLIENTE INTERESSADO:*\n\n` +
+                             `*Nome:* ${nome}\n` +
+                             `*CPF:* ${cpf}\n` +
+                             `*Data Nasc.:* ${dataNascimento}\n` +
+                             `*Endereço:* ${endereco}\n` +
+                             `*CEP:* ${cep}\n` +
+                             `*E-mail:* ${email}\n` +
+                             `*WhatsApp:* ${whatsapp}\n\n` +
+                             `_Pronto para o Pacto e o novo protocolo de pagamento!_`;
+
+            // Codifica a mensagem para URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
+
+            // Abre o WhatsApp
+            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliam}&text=${mensagemCodificada}`, '_blank');
+
+            // Opcional: Feedback visual para o usuário
+            alert('Seus dados foram enviados! William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra.');
+            this.reset(); // Limpa o formulário após o envio
+        });
+    </script>
+</body>
 </html>
