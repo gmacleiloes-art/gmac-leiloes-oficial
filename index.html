@@ -205,6 +205,48 @@
             text-align: center;
             margin-top: 20px;
         }
+        
+        /* Estilos para o calculador de frete */
+        #calculador-frete {
+            background-color: var(--cor-fundo-card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--sombra-chique);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+            border-top: 5px solid var(--cor-destaque-gold); /* Dourado no topo */
+        }
+        #calculador-frete input[type="text"] {
+            margin-bottom: 15px;
+        }
+        #calculador-frete button {
+            background-color: var(--cor-secundaria-bv);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%; /* Botão com largura total */
+            max-width: 300px; /* Limite para o botão */
+        }
+        #calculador-frete button:hover {
+            background-color: #002b5e;
+        }
+        #resultado-frete {
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--cor-alerta);
+        }
+        #resultado-frete span {
+            color: var(--cor-principal);
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
 
 
         /* Seção Contato */
@@ -246,225 +288,254 @@
             background-color: #333333;
             color: var(--cor-texto-claro);
             text-align: center;
-            padding: 25px 0;
+            padding: 30px 0;
             font-size: 0.9em;
-            border-top: 5px solid var(--cor-destaque-gold);
-        }
-
-        footer strong {
-            color: white;
         }
 
         footer p {
-            margin: 5px 0;
-            color: var(--cor-texto-claro);
+            margin: 0;
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
             h1 { font-size: 2.5em; }
             h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
             header p { font-size: 1.2em; }
-            .cta-header, .whatsapp-btn { font-size: 1.2em; padding: 15px 30px; }
-            #como-funciona .passos-grid, #nossos-ativos .grid-ativos {
-                grid-template-columns: 1fr;
-            }
+            .cta-header { padding: 15px 30px; font-size: 1.2em; }
+            .passos-grid { grid-template-columns: 1fr; }
+            .grid-ativos { grid-template-columns: 1fr; }
+            .ativo-card { width: 90%; margin: 15px auto; }
+            .whatsapp-btn { font-size: 1.2em; padding: 15px 30px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.8em; }
+            header p { font-size: 1em; }
+            .cta-header { font-size: 1em; padding: 12px 25px; }
+            .ativo-card .preco-execucao { font-size: 2em; }
+            .whatsapp-btn { font-size: 1em; padding: 12px 25px; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
             <h1>GMAC EXECUÇÃO DE ATIVOS</h1>
-            <p style="color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);">**AGENTE EXCLUSIVO BV FINANCEIRA S.A.**</p>
-            <p>LIQUIDAÇÃO DE PASSIVOS VEICULARES COM SEGURANÇA JURÍDICA E VALORES EXECUTIVOS.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="cta-header">
-                INICIAR EXECUÇÃO (FALE COM O AGENTE)
-            </a>
+            <p>Agente exclusivo da <span style="color: var(--cor-secundaria-bv); font-weight: bold;">BV FINANCEIRA</span> para liquidação imediata de passivos veiculares.</p>
+            <p style="color: var(--cor-destaque-gold); font-weight: bold; font-size: 1.8em; margin-top: 20px;">Ativos 100% Quitados. Processo Legal e Transparente.</p>
+            <a href="#nossos-ativos" class="cta-header">VER ATIVOS DISPONÍVEIS</a>
         </div>
     </header>
 
     <main>
-        <section id="quem-somos" class="container">
-            <h2>DOMÍNIO E TRANSPARÊNCIA NA LIQUIDAÇÃO</h2>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto 1.5em auto;">A **GMAC EXECUÇÃO DE ATIVOS** é o braço de liquidação rápida da **BV FINANCEIRA**. Nosso mandato é claro: **quitar e repassar ativos** (veículos com dívidas resolvidas) diretamente ao mercado, eliminando intermediários e burocracia. Não é leilão tradicional. É **Execução Direta**. Por isso, o preço é **irrefutável**.</p>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
-        </section>
-
-        <section id="como-funciona" class="container">
-            <h2>PROTOCOLO DE EXECUÇÃO - LOGÍSTICA BLINDADA GMAC</h2>
-            <div class="passos-grid">
-                
-                <div class="passo-card">
-                    <h3>1. VALIDAÇÃO DO ATIVO</h3>
-                    <p>Nosso agente William Fialho confirma a disponibilidade do veículo e a **Logística Blindada GMAC** para sua região. Você recebe o vídeo atualizado do veículo no pátio.</p>
-                </div>
-                
-                <div class="passo-card">
-                    <h3>2. PACTO JURÍDICO E DESPACHO</h3>
-                    <p>Geramos o **Pacto de Execução, Quitação e Certidão de Liquidação GMAC/BV**. A logística de transporte é ativada e você recebe o código de rastreio para acompanhamento.</p>
-                </div>
-                
-                <div class="passo-card">
-                    <h3>3. INSPEÇÃO E PAGAMENTO NA ENTREGA</h3>
-                    <p>O veículo é entregue no endereço. Você inspeciona o ativo. Após sua aprovação, o **Valor Total do Ativo + Frete** é pago no ato da entrega. O veículo só é descarregado após a confirmação da transferência.</p>
-                </div>
-
-                <div class="passo-card">
-                    <h3>4. DOCUMENTAÇÃO IMPECÁVEL</h3>
-                    <p>O veículo é entregue com recibo em branco e IPVA/Licenciamento 2025 pago. Toda a documentação é perfeita e sem dívidas anteriores.</p>
+        <section id="como-funciona">
+            <div class="container">
+                <h2>Como Funciona a Execução</h2>
+                <div class="passos-grid">
+                    <div class="passo-card">
+                        <h3><i class="fas fa-search"></i> 1. Identificação</h3>
+                        <p>A BV Financeira nos aciona para gerenciar a execução de veículos com dívidas.</p>
+                    </div>
+                    <div class="passo-card">
+                        <h3><i class="fas fa-gavel"></i> 2. Avaliação e Liquidação</h3>
+                        <p>Avaliamos o ativo e procedemos com a liquidação judicial ou extrajudicial.</p>
+                    </div>
+                    <div class="passo-card">
+                        <h3><i class="fas fa-car-alt"></i> 3. Ativos Quitado</h3>
+                        <p>O veículo é quitado e liberado para o novo proprietário sem pendências.</p>
+                    </div>
+                    <div class="passo-card">
+                        <h3><i class="fas fa-handshake"></i> 4. Entrega e Suporte</h3>
+                        <p>Garantimos a entrega do veículo e todo o suporte documental necessário.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="nossos-ativos" class="container">
-            <h2>OPORTUNIDADES DE EXECUÇÃO (VALORES DO ATIVO)</h2>
-            <div class="grid-ativos">
-                <div class="ativo-card">
-                    <h3>Honda Biz 125 (2022/2023)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 12.000,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 1.600,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.600,00.** Frete a ser calculado.</p>
-                </div>
-
-                <div class="ativo-card">
-                    <h3>Honda Pop 110 (2021)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 8.500,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 1.400,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.400,00.** Frete a ser calculado.</p>
-                </div>
-
-                <div class="ativo-card">
-                    <h3>Yamaha Fazer YS 250 (2018)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 15.000,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 2.200,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 2.200,00.** Frete a ser calculado.</p>
+        <section id="nossos-ativos">
+            <div class="container">
+                <h2>Ativos Disponíveis para Liquidação</h2>
+                <div class="grid-ativos">
+                    <div class="ativo-card">
+                        <h3><i class="fas fa-car-side"></i> Fiat Argo 1.0 Flex</h3>
+                        <p>Ano: 2020 | Cor: Prata | KM: 45.000</p>
+                        <p>Localização: São Paulo - SP</p>
+                        <p class="preco-mercado">Valor de Mercado: R$ 58.000,00</p>
+                        <p class="preco-execucao">Valor de Execução: R$ 42.500,00</p>
+                        <p class="obs">Obs: Frete NÃO incluso no valor.</p>
+                        <a href="#contato" class="cta-header w-100">TENHO INTERESSE</a>
+                        <div class="clausula-alerta">
+                            <h4>Atenção!</h4>
+                            <p>Em caso de desistência após a reserva e pagamento, será aplicada multa de <strong>20% sobre o valor da execução</strong>. A reserva garante a exclusividade e o início do processo de transferência.</p>
+                        </div>
+                    </div>
+                    <div class="ativo-card">
+                        <h3><i class="fas fa-truck-pickup"></i> Chevrolet S10 2.8 Diesel</h3>
+                        <p>Ano: 2018 | Cor: Branca | KM: 98.000</p>
+                        <p>Localização: Belo Horizonte - MG</p>
+                        <p class="preco-mercado">Valor de Mercado: R$ 130.000,00</p>
+                        <p class="preco-execucao">Valor de Execução: R$ 95.000,00</p>
+                        <p class="obs">Obs: Frete NÃO incluso no valor.</p>
+                        <a href="#contato" class="cta-header w-100">TENHO INTERESSE</a>
+                        <div class="clausula-alerta">
+                            <h4>Atenção!</h4>
+                            <p>Em caso de desistência após a reserva e pagamento, será aplicada multa de <strong>20% sobre o valor da execução</strong>. A reserva garante a exclusividade e o início do processo de transferência.</p>
+                        </div>
+                    </div>
+                    <div class="ativo-card">
+                        <h3><i class="fas fa-motorcycle"></i> Honda CB 500F</h3>
+                        <p>Ano: 2021 | Cor: Vermelha | KM: 12.000</p>
+                        <p>Localização: Rio de Janeiro - RJ</p>
+                        <p class="preco-mercado">Valor de Mercado: R$ 42.000,00</p>
+                        <p class="preco-execucao">Valor de Execução: R$ 30.000,00</p>
+                        <p class="obs">Obs: Frete NÃO incluso no valor.</p>
+                        <a href="#contato" class="cta-header w-100">TENHO INTERESSE</a>
+                        <div class="clausula-alerta">
+                            <h4>Atenção!</h4>
+                            <p>Em caso de desistência após a reserva e pagamento, será aplicada multa de <strong>20% sobre o valor da execução</strong>. A reserva garante a exclusividade e o início do processo de transferência.</p>
+                        </div>
+                    </div>
+                    <div class="ativo-card">
+                        <h3><i class="fas fa-van"></i> Renault Master Furgão</h3>
+                        <p>Ano: 2019 | Cor: Branca | KM: 110.000</p>
+                        <p>Localização: Curitiba - PR</p>
+                        <p class="preco-mercado">Valor de Mercado: R$ 115.000,00</p>
+                        <p class="preco-execucao">Valor de Execução: R$ 85.000,00</p>
+                        <p class="obs">Obs: Frete NÃO incluso no valor.</p>
+                        <a href="#contato" class="cta-header w-100">TENHO INTERESSE</a>
+                        <div class="clausula-alerta">
+                            <h4>Atenção!</h4>
+                            <p>Em caso de desistência após a reserva e pagamento, será aplicada multa de <strong>20% sobre o valor da execução</strong>. A reserva garante a exclusividade e o início do processo de transferência.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="seguranca" class="container">
-            <h2>BLINDAGEM JURÍDICA GMAC/BV</h2>
-            <div class="passos-grid">
-                 <div class="passo-card">
-                    <h3><i class="fas fa-check-circle text-success"></i> QUITAÇÃO E CERTIDÃO LEGAL</h3>
-                    <p>O Pacto vale como Certidão de Liquidação de Dívida e Gravame, **eliminando qualquer ônus do seu nome**.</p>
+        <section id="calculador-frete-secao">
+            <div class="container">
+                <h2>Simule seu Frete</h2>
+                <div id="calculador-frete">
+                    <h3>Calcule o Custo de Entrega do seu Ativo</h3>
+                    <div class="form-group">
+                        <label for="cep-destino">Informe seu CEP de Destino:</label>
+                        <input type="text" id="cep-destino" class="form-control" placeholder="Ex: 01001-000" maxlength="9">
+                    </div>
+                    <button id="calcular-frete-btn">CALCULAR FRETE</button>
+                    <div id="resultado-frete">
+                        Aguardando CEP...
+                    </div>
                 </div>
-                <div class="passo-card">
-                    <h3><i class="fas fa-file-contract text-primary"></i> LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
-                    <p>Veículo entregue com Recibo em Branco e IPVA/Licenciamento 2025 Pago. **Zero dívidas antigas, zero surpresas.**</p>
-                </div>
-                <div class="passo-card">
-                    <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
-                    <p>A Logística Blindada GMAC garante que você só paga o valor total **após a conferência visual na entrega**.</p>
-                </div>
-            </div>
-            
-            <div class="clausula-alerta">
-                <h4><i class="fas fa-exclamation-triangle"></i> COMPROMISSO E CLÁUSULA DE RESCISÃO</h4>
-                <p>A confirmação do despacho estabelece um compromisso jurídico formalizado em Pacto.</p>
-                <p class="mb-0">
-                    Em casos de desistência injustificada ou recusa de pagamento do valor total (Ativo + Frete) no ato da entrega (após inspeção e aceite), o cliente estará sujeito a uma **multa compensatória de 30% sobre o valor total do frete**. Esta cláusula visa cobrir custos logísticos de retorno e reestocagem.
-                </p>
             </div>
         </section>
 
-        <section id="iniciar-cadastro" class="container">
-            <h2>GARANTA SUA MOTO - CADASTRO RÁPIDO</h2>
-            <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto 2em auto;">Preencha seus dados para que nosso agente William Fialho possa iniciar seu processo e emitir seu Pacto de Execução com o pagamento total na entrega, após sua inspeção.</p>
-
-            <div class="form-card" style="background-color: var(--cor-fundo-card); padding: 30px; border-radius: 8px; box-shadow: var(--sombra-chique);">
-                <form id="cadastroMotoForm">
-                    <div class="form-group mb-3">
-                        <label for="nomeCompleto">Nome Completo:</label>
-                        <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="dataNascimento">Data de Nascimento:</label>
-                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="enderecoCompleto">Endereço Completo (Rua, Nº, Complemento, Bairro, Cidade, Estado):</label>
-                        <input type="text" class="form-control" id="enderecoCompleto" name="enderecoCompleto" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cep">CEP:</label>
-                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group mb-4">
-                        <label for="whatsapp">WhatsApp (com DDD):</label>
-                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
-                    </div>
-                    <button type="submit" class="cta-header w-100">ENVIAR DADOS E INICIAR MINHA EXECUÇÃO</button>
-                </form>
+        <section id="contato">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p>Tem dúvidas ou quer agilizar a liquidação de um ativo?</p>
+                <p>Nossa equipe está pronta para te atender.</p>
+                <a href="https://wa.me/SEU_NUMERO_WHATSAPP" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Falar com um Especialista
+                </a>
             </div>
-        </section>
-        <section id="contato" class="container">
-            <h2>EXECUÇÃO IMEDIATA É O NOSSO MANDATO</h2>
-            <p>As oportunidades são **limitadas pelo estoque de execução**. O Agente William Fialho está pronto para a finalização.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="whatsapp-btn">
-                FALE COM O AGENTE (WILLIAM FIALHO)
-            </a>
-            <p style="margin-top: 30px; font-size: 0.9em; color: white;">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
-            <p>Telefone Fixo: <strong>(14) 3197-4294</strong></p>
-            <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: R. Fortunato Resta, 11-35 - Jardim Jussara, Bauru - SP, 17050-040</p>
-            <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento do **Valor Total (Ativo + Frete)** é feito **no ato da entrega**, após sua conferência visual. **NÃO HÁ PARCELAMENTO FINANCEIRO.**</p>
-            <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
+            <p>&copy; 2023 GMAC Execução de Ativos. Todos os direitos reservados.</p>
+            <p>Parceria Exclusiva BV Financeira.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById('cadastroMotoForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+        document.addEventListener('DOMContentLoaded', () => {
+            const cepInput = document.getElementById('cep-destino');
+            const calcularFreteBtn = document.getElementById('calcular-frete-btn');
+            const resultadoFreteDiv = document.getElementById('resultado-frete');
 
-            const nome = document.getElementById('nomeCompleto').value;
-            const cpf = document.getElementById('cpf').value;
-            const dataNascimento = document.getElementById('dataNascimento').value;
-            const endereco = document.getElementById('enderecoCompleto').value;
-            const cep = document.getElementById('cep').value;
-            const email = document.getElementById('email').value;
-            const whatsapp = document.getElementById('whatsapp').value;
+            // CEP de origem fixo da sua loja/depósito principal
+            // *** IMPORTANTE: SUBSTITUA ESTE CEP PELO ENDEREÇO ONDE OS VEÍCULOS ESTÃO ARMAZENADOS ***
+            const CEP_ORIGEM = '01001-000'; // Exemplo: CEP da Sé, São Paulo.
+            const VALOR_POR_KM = 1.70;
 
-            // NÚMERO DE WHATSAPP DE WILLIAM FIALHO - CORRIGIDO
-            const numeroWilliamFialho = '5511970512149'; 
+            // Função para formatar o CEP (apenas números e adiciona o hífen)
+            cepInput.addEventListener('input', (event) => {
+                let value = event.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + '-' + value.substring(5, 8);
+                }
+                event.target.value = value;
+            });
 
-            // Mensagem pré-formatada para enviar ao William Fialho
-            const mensagem = `*NOVO CADASTRO DO SITE - CLIENTE INTERESSADO:*\n\n` +
-                             `*Nome:* ${nome}\n` +
-                             `*CPF:* ${cpf}\n` +
-                             `*Data Nasc.:* ${dataNascimento}\n` +
-                             `*Endereço:* ${endereco}\n` +
-                             `*CEP:* ${cep}\n` +
-                             `*E-mail:* ${email}\n` +
-                             `*WhatsApp do Cliente:* ${whatsapp}\n\n` +
-                             `_Pronto para o Pacto e pagamento total na entrega!_`;
+            calcularFreteBtn.addEventListener('click', async () => {
+                const cepDestino = cepInput.value.replace(/\D/g, ''); // Garante que só temos dígitos
 
-            // Codifica a mensagem para URL
-            const mensagemCodificada = encodeURIComponent(mensagem);
+                if (cepDestino.length !== 8) {
+                    resultadoFreteDiv.innerHTML = '<span style="color: red;">Por favor, insira um CEP válido com 8 dígitos.</span>';
+                    return;
+                }
 
-            // Abre o WhatsApp com a mensagem pré-preenchida
-            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada}`, '_blank');
-            
-            alert('Seus dados foram enviados! William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra.');
-            this.reset(); // Limpa o formulário após o envio
+                resultadoFreteDiv.innerHTML = 'Calculando...';
+
+                // ----------------------------------------------------------------------
+                // IMPORTANTE:
+                // Para calcular a distância entre dois CEPs de forma precisa e segura,
+                // você precisará de uma API de Geocodificação/Distância e um BACKEND.
+                //
+                // A implementação abaixo é uma SIMULAÇÃO para fins de demonstração,
+                // já que fazer a chamada direta para APIs como Google Maps aqui
+                // exporia sua chave de API e não é recomendado para produção.
+                // ----------------------------------------------------------------------
+
+                try {
+                    // Simulação: obter dados do CEP para ter uma "ideia" da região
+                    // (ViaCEP NÃO fornece latitude/longitude, apenas dados de endereço)
+                    const responseDestino = await fetch(`https://viacep.com.br/ws/${cepDestino}/json/`);
+                    const dataDestino = await responseDestino.json();
+
+                    if (dataDestino.erro) {
+                        resultadoFreteDiv.innerHTML = '<span style="color: red;">CEP de destino não encontrado.</span>';
+                        return;
+                    }
+
+                    let distanciaEmKm = 0;
+
+                    // Lógica de simulação de distância baseada no estado para exemplificar.
+                    // ESTA LÓGICA DEVE SER SUBSTITUÍDA PELA CHAMADA REAL À SUA API DE DISTÂNCIA (via backend)!
+                    switch (dataDestino.uf) {
+                        case 'SP':
+                            if (dataDestino.localidade === 'São Paulo') {
+                                distanciaEmKm = Math.floor(Math.random() * 60) + 10; // 10 a 69 km
+                            } else {
+                                distanciaEmKm = Math.floor(Math.random() * 200) + 70; // 70 a 269 km
+                            }
+                            break;
+                        case 'MG':
+                        case 'RJ':
+                        case 'PR':
+                            distanciaEmKm = Math.floor(Math.random() * 400) + 200; // 200 a 599 km
+                            break;
+                        case 'SC':
+                        case 'RS':
+                        case 'ES':
+                        case 'MS':
+                            distanciaEmKm = Math.floor(Math.random() * 800) + 400; // 400 a 1199 km
+                            break;
+                        default:
+                            distanciaEmKm = Math.floor(Math.random() * 1500) + 800; // 800 a 2299 km
+                    }
+
+                    const valorFrete = distanciaEmKm * VALOR_POR_KM;
+                    resultadoFreteDiv.innerHTML = `<strong>Frete Estimado: R$ ${valorFrete.toFixed(2)}</strong><br><span>(${distanciaEmKm} km do nosso centro de distribuição)</span>`;
+
+                } catch (error) {
+                    console.error('Erro ao calcular frete:', error);
+                    resultadoFreteDiv.innerHTML = '<span style="color: red;">Erro ao calcular frete. Tente novamente.</span>';
+                }
+            });
         });
     </script>
 </body>
