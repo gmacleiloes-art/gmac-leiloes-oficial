@@ -1,474 +1,464 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GMAC EXECUÇÃO DE ATIVOS | BV FINANCEIRA - LIQUIDAÇÃO IMEDIATA</title>
-    <meta name="description" content="GMAC LEILÕES: Agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Variáveis de Cor - TEMA GOLD EXECUTIVO */
-        :root {
-            --fundo-base: #F5F5F5; /* Cinza Claro */
-            --cor-principal: #333333; /* Texto Sólido */
-            --cor-destaque-gold: #B8860B; /* DOURADO EXECUTIVO */
-            --cor-alerta: #8B4513; /* Bronze/Oportunidade */
-            --cor-secundaria-bv: #004085; /* Azul Marinho Institucional */
-            --cor-fundo-card: #FFFFFF;
-            --cor-texto-claro: #6c757d;
-            --sombra-chique: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAC EXECUÇÃO DE ATIVOS | BV FINANCEIRA - LIQUIDAÇÃO IMEDIATA</title>
+    <meta name="description" content="GMAC LEILÕES: Agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Variáveis de Cor - TEMA GOLD EXECUTIVO */
+        :root {
+            --fundo-base: #F5F5F5; /* Cinza Claro */
+            --cor-principal: #333333; /* Texto Sólido */
+            --cor-destaque-gold: #B8860B; /* DOURADO EXECUTIVO */
+            --cor-alerta: #8B4513; /* Bronze/Oportunidade */
+            --cor-secundaria-bv: #004085; /* Azul Marinho Institucional */
+            --cor-fundo-card: #FFFFFF;
+            --cor-texto-claro: #6c757d;
+            --sombra-chique: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-        /* Estilos Globais */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--fundo-base);
-            color: var(--cor-principal);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+        /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--fundo-base);
+            color: var(--cor-principal);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
-        h1, h2, h3, h4 {
-            font-family: 'Arial Black', sans-serif;
-            color: var(--cor-secundaria-bv);
-        }
+        h1, h2, h3, h4 {
+            font-family: 'Arial Black', sans-serif;
+            color: var(--cor-secundaria-bv);
+        }
 
-        h1 { font-size: 3.2em; margin-bottom: 0.5em; color: var(--cor-principal); }
-        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
-        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-secundaria-bv); }
+        h1 { font-size: 3.2em; margin-bottom: 0.5em; color: var(--cor-principal); }
+        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-secundaria-bv); }
 
-        p { margin-bottom: 1em; }
+        p { margin-bottom: 1em; }
 
-        /* Header - O MÓDULO DE AUTORIDADE GOLD */
-        header {
-            background-color: var(--cor-fundo-card); 
-            color: var(--cor-principal);
-            padding: 50px 0;
-            text-align: center;
-            border-bottom: 8px solid var(--cor-destaque-gold); /* DOURADO */
-            box-shadow: var(--sombra-chique);
-        }
+        /* Header - O MÓDULO DE AUTORIDADE GOLD */
+        header {
+            background-color: var(--cor-fundo-card); 
+            color: var(--cor-principal);
+            padding: 50px 0;
+            text-align: center;
+            border-bottom: 8px solid var(--cor-destaque-gold); /* DOURADO */
+            box-shadow: var(--sombra-chique);
+        }
 
-        header p {
-            font-size: 1.5em;
-            font-weight: 600;
-            color: var(--cor-texto-claro);
-            max-width: 800px;
-            margin: 0.5em auto;
-        }
+        header p {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--cor-texto-claro);
+            max-width: 800px;
+            margin: 0.5em auto;
+        }
 
-        /* Call to Action (CTA) no Header */
-        .cta-header {
-            display: inline-block;
-            background-color: var(--cor-destaque-gold); /* DOURADO */
-            color: white;
-            padding: 18px 40px;
-            margin-top: 30px;
-            border-radius: 5px;
-            font-size: 1.4em;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s;
-            box-shadow: var(--sombra-chique);
-        }
+        /* Call to Action (CTA) no Header */
+        .cta-header {
+            display: inline-block;
+            background-color: var(--cor-destaque-gold); /* DOURADO */
+            color: white;
+            padding: 18px 40px;
+            margin-top: 30px;
+            border-radius: 5px;
+            font-size: 1.4em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: var(--sombra-chique);
+        }
 
-        .cta-header:hover {
-            background-color: #a07909; /* Dourado mais escuro */
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
+        .cta-header:hover {
+            background-color: #a07909; /* Dourado mais escuro */
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
 
-        /* Seções */
-        section {
-            padding: 50px 0;
-            border-bottom: 1px solid #ddd;
-        }
+        /* Seções */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #ddd;
+        }
 
-        /* Seção Como Funciona */
-        #como-funciona {
-            background-color: #fcfcfc;
-        }
+        /* Seção Como Funciona */
+        #como-funciona {
+            background-color: #fcfcfc;
+        }
 
-        #como-funciona h2 {
-            color: var(--cor-alerta);
-        }
+        #como-funciona h2 {
+            color: var(--cor-alerta);
+        }
 
-        #como-funciona .passos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            text-align: center;
-        }
+        #como-funciona .passos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
 
-        .passo-card {
-            background-color: #FFFFFF;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: var(--sombra-chique);
-            border-top: 3px solid var(--cor-secundaria-bv);
-        }
+        .passo-card {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: var(--sombra-chique);
+            border-top: 3px solid var(--cor-secundaria-bv);
+        }
 
-        .passo-card h3 {
-             font-size: 1.5em;
-        }
+        .passo-card h3 {
+             font-size: 1.5em;
+        }
 
-        /* Seção Ativos */
-        #nossos-ativos .grid-ativos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            justify-content: center;
-        }
+        /* Seção Ativos */
+        #nossos-ativos .grid-ativos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
 
-        .ativo-card {
-            background-color: var(--cor-fundo-card);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: var(--sombra-chique);
-            text-align: center;
-        }
-        
-        .ativo-card h3 {
-             color: var(--cor-secundaria-bv);
-             border-bottom: 2px solid var(--cor-alerta);
-             padding-bottom: 10px;
-        }
+        .ativo-card {
+            background-color: var(--cor-fundo-card);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: var(--sombra-chique);
+            text-align: center;
+        }
+        
+        .ativo-card h3 {
+             color: var(--cor-secundaria-bv);
+             border-bottom: 2px solid var(--cor-alerta);
+             padding-bottom: 10px;
+        }
 
-        .ativo-card .preco-execucao {
-            font-size: 2.5em;
-            color: var(--cor-alerta);
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-        }
+        .ativo-card .preco-execucao {
+            font-size: 2.5em;
+            color: var(--cor-alerta);
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
 
-        .ativo-card .preco-mercado {
-            text-decoration: line-through;
-            color: var(--cor-texto-claro);
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-        
-        .ativo-card .obs {
-            font-size: 0.85em;
-            color: var(--cor-texto-claro);
-            margin-top: 10px;
-            font-weight: bold; /* Destaque na exclusão do frete */
-        }
-        
-        /* Estilo da nova cláusula de multa */
-        .clausula-alerta {
-            border-left: 5px solid #ffc107;
-            background-color: #fffbe6;
-            padding: 15px;
-            margin-top: 20px;
-            color: #856404;
-            text-align: left;
-        }
-        
-        .clausula-alerta h4 {
-            color: #856404;
-            font-size: 1.2em;
-            margin-top: 0;
-        }
+        .ativo-card .preco-mercado {
+            text-decoration: line-through;
+            color: var(--cor-texto-claro);
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        
+        .ativo-card .obs {
+            font-size: 0.85em;
+            color: var(--cor-texto-claro);
+            margin-top: 10px;
+            font-weight: bold; /* Destaque na exclusão do frete */
+        }
+        
+        /* Estilo da nova cláusula de multa */
+        .clausula-alerta {
+            border-left: 5px solid #ffc107;
+            background-color: #fffbe6;
+            padding: 15px;
+            margin-top: 20px;
+            color: #856404;
+            text-align: left;
+        }
+        
+        .clausula-alerta h4 {
+            color: #856404;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
 
-        /* Estilos para o formulário */
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--cor-secundaria-bv);
-        }
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Garante que padding não aumente a largura */
-            font-size: 1em;
-        }
-        .form-control:focus {
-            border-color: var(--cor-destaque-gold);
-            outline: none;
-            box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.25);
-        }
-        .cta-header.w-100 { /* Ajuste para o botão do form */
-            width: 100%;
-            text-align: center;
-            margin-top: 20px;
-        }
+        /* Estilos para o formulário */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--cor-secundaria-bv);
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+            font-size: 1em;
+        }
+        .form-control:focus {
+            border-color: var(--cor-destaque-gold);
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.25);
+        }
+        .cta-header.w-100 { /* Ajuste para o botão do form */
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
 
 
-        /* Seção Contato */
-        #contato {
-            text-align: center;
-            background-color: var(--cor-secundaria-bv); /* Azul Marinho para contraste */
-            color: white;
-            padding: 60px 0;
-        }
+        /* Seção Contato */
+        #contato {
+            text-align: center;
+            background-color: var(--cor-secundaria-bv); /* Azul Marinho para contraste */
+            color: white;
+            padding: 60px 0;
+        }
 
-        #contato h2 {
-            color: white;
-        }
+        #contato h2 {
+            color: white;
+        }
 
-        #contato p {
-            color: #d3d3d3;
-        }
-        
-        .whatsapp-btn {
-            display: inline-block;
-            background-color: var(--cor-destaque-gold); /* DOURADO */
-            color: white;
-            padding: 18px 40px;
-            border-radius: 5px;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 30px;
-            box-shadow: var(--sombra-chique);
-            transition: background-color 0.3s ease;
-        }
+        #contato p {
+            color: #d3d3d3;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: var(--cor-destaque-gold); /* DOURADO */
+            color: white;
+            padding: 18px 40px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 30px;
+            box-shadow: var(--sombra-chique);
+            transition: background-color 0.3s ease;
+        }
 
-        .whatsapp-btn:hover {
-            background-color: #a07909;
-            text-decoration: none;
-        }
+        .whatsapp-btn:hover {
+            background-color: #a07909;
+            text-decoration: none;
+        }
 
-        /* Footer */
-        footer {
-            background-color: #333333;
-            color: var(--cor-texto-claro);
-            text-align: center;
-            padding: 25px 0;
-            font-size: 0.9em;
-            border-top: 5px solid var(--cor-destaque-gold);
-        }
+        /* Footer */
+        footer {
+            background-color: #333333;
+            color: var(--cor-texto-claro);
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9em;
+            border-top: 5px solid var(--cor-destaque-gold);
+        }
 
-        footer strong {
-            color: white;
-        }
+        footer strong {
+            color: white;
+        }
 
-        footer p {
-            margin: 5px 0;
-            color: var(--cor-texto-claro);
-        }
+        footer p {
+            margin: 5px 0;
+            color: var(--cor-texto-claro);
+        }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            h2 { font-size: 2em; }
-            header p { font-size: 1.2em; }
-            .cta-header, .whatsapp-btn { font-size: 1.2em; padding: 15px 30px; }
-            #como-funciona .passos-grid, #nossos-ativos .grid-ativos {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            header p { font-size: 1.2em; }
+            .cta-header, .whatsapp-btn { font-size: 1.2em; padding: 15px 30px; }
+            #como-funciona .passos-grid, #nossos-ativos .grid-ativos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>GMAC EXECUÇÃO DE ATIVOS</h1>
-            <p style="color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);">**AGENTE EXCLUSIVO BV FINANCEIRA S.A.**</p>
-            <p>LIQUIDAÇÃO DE PASSIVOS VEICULARES COM SEGURANÇA JURÍDICA E VALORES EXECUTIVOS.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="cta-header">
-                INICIAR EXECUÇÃO (FALE COM O AGENTE)
-            </a>
-        </div>
-    </header>
+    <header>
+        <div class="container">
+            <h1>GMAC EXECUÇÃO DE ATIVOS</h1>
+            <p style="color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);">**AGENTE EXCLUSIVO BV FINANCEIRA S.A.**</p>
+            <p>LIQUIDAÇÃO DE PASSIVOS VEICULARES COM SEGURANÇA JURÍDICA E VALORES EXECUTIVOS.</p>
+            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="cta-header">
+                INICIAR EXECUÇÃO (FALE COM O AGENTE)
+            </a>
+        </div>
+    </header>
 
-    <main>
-        <section id="quem-somos" class="container">
-            <h2>DOMÍNIO E TRANSPARÊNCIA NA LIQUIDAÇÃO</h2>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto 1.5em auto;">A **GMAC EXECUÇÃO DE ATIVOS** é o braço de liquidação rápida da **BV FINANCEIRA**. Nosso mandato é claro: **quitar e repassar ativos** (veículos com dívidas resolvidas) diretamente ao mercado, eliminando intermediários e burocracia. Não é leilão tradicional. É **Execução Direta**. Por isso, o preço é **irrefutável**.</p>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
-        </section>
+    <main>
+        <section id="quem-somos" class="container">
+            <h2>DOMÍNIO E TRANSPARÊNCIA NA LIQUIDAÇÃO</h2>
+            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto 1.5em auto;">A **GMAC EXECUÇÃO DE ATIVOS** é o braço de liquidação rápida da **BV FINANCEIRA**. Nosso mandato é claro: **quitar e repassar ativos** (veículos com dívidas resolvidas) diretamente ao mercado, eliminando intermediários e burocracia. Não é leilão tradicional. É **Execução Direta**. Por isso, o preço é **irrefutável**.</p>
+            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
+        </section>
 
-        <section id="como-funciona" class="container">
-            <h2>PROTOCOLO DE EXECUÇÃO - LOGÍSTICA BLINDADA GMAC</h2>
-            <div class="passos-grid">
-                
-                <div class="passo-card">
-                    <h3>1. VALIDAÇÃO DO ATIVO</h3>
-                    <p>Nosso agente William Fialho confirma a disponibilidade do veículo e a **Logística Blindada GMAC** para sua região. Você recebe o vídeo atualizado do veículo no pátio.</p>
-                </div>
-                
-                <div class="passo-card">
-                    <h3>2. PACTO JURÍDICO E DESPACHO</h3>
-                    <p>Geramos o **Pacto de Execução, Quitação e Certidão de Liquidação GMAC/BV**. A logística de transporte é ativada e você recebe o código de rastreio para acompanhamento.</p>
-                </div>
-                
-                <div class="passo-card">
-                    <h3>3. INSPEÇÃO E PAGAMENTO NA ENTREGA</h3>
-                    <p>O veículo é entregue no endereço. Você inspeciona o ativo. Após sua aprovação, o **Valor Total do Ativo + Frete** é pago no ato da entrega. O veículo só é descarregado após a confirmação da transferência.</p>
-                </div>
+        <section id="como-funciona" class="container">
+            <h2>PROTOCOLO DE EXECUÇÃO - LOGÍSTICA BLINDADA GMAC</h2>
+            <div class="passos-grid">
+                
+                <div class="passo-card">
+                    <h3>1. VALIDAÇÃO DO ATIVO</h3>
+                    <p>Nosso agente William Fialho confirma a disponibilidade do veículo e a **Logística Blindada GMAC** para sua região. Você recebe o vídeo atualizado do veículo no pátio.</p>
+                </div>
+                
+                <div class="passo-card">
+                    <h3>2. PACTO JURÍDICO E DESPACHO</h3>
+                    <p>Geramos o **Pacto de Execução, Quitação e Certidão de Liquidação GMAC/BV**. A logística de transporte é ativada e você recebe o código de rastreio para acompanhamento.</p>
+                </div>
+                
+                <div class="passo-card">
+                    <h3>3. INSPEÇÃO E PAGAMENTO NA ENTREGA</h3>
+                    <p>O veículo é entregue no endereço. Você inspeciona o ativo. Após sua aprovação, o **Valor do Ativo** é pago no ato da entrega. **O frete já terá sido pago antecipadamente** para liberação do despacho.</p>
+                </div>
 
-                <div class="passo-card">
-                    <h3>4. DOCUMENTAÇÃO IMPECÁVEL</h3>
-                    <p>O veículo é entregue com recibo em branco e IPVA/Licenciamento 2025 pago. Toda a documentação é perfeita e sem dívidas anteriores.</p>
-                </div>
-            </div>
-        </section>
+                <div class="passo-card">
+                    <h3>4. DOCUMENTAÇÃO IMPECÁVEL</h3>
+                    <p>O veículo é entregue com recibo em branco e IPVA/Licenciamento 2025 pago. Toda a documentação é perfeita e sem dívidas anteriores.</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="nossos-ativos" class="container">
-            <h2>OPORTUNIDADES DE EXECUÇÃO (VALORES DO ATIVO)</h2>
-            <div class="grid-ativos">
-                <div class="ativo-card">
-                    <h3>Honda Biz 125 (2022/2023)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 12.000,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 1.600,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.600,00.** Frete a ser calculado.</p>
-                </div>
+        <section id="nossos-ativos" class="container">
+            <h2>OPORTUNIDADES DE EXECUÇÃO (VALORES DO ATIVO)</h2>
+            <div class="grid-ativos">
+                <div class="ativo-card">
+                    <h3>Honda Biz 125 (2022/2023)</h3>
+                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 12.000,00</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 1.600,00</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 1.600,00.** Frete a ser calculado.</p>
+                </div>
 
-                <div class="ativo-card">
-                    <h3>Honda Pop 110 (2021)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 8.500,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 1.400,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.400,00.** Frete a ser calculado.</p>
-                </div>
+                <div class="ativo-card">
+                    <h3>Honda Pop 110 (2021)</h3>
+                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 8.500,00</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 1.400,00</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 1.400,00.** Frete a ser calculado.</p>
+                </div>
 
-                <div class="ativo-card">
-                    <h3>Yamaha Fazer YS 250 (2018)</h3>
-                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 15.000,00</p>
-                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
-                    <p class="preco-execucao">R$ 2.200,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 2.200,00.** Frete a ser calculado.</p>
-                </div>
-            </div>
-        </section>
+                <div class="ativo-card">
+                    <h3>Yamaha Fazer YS 250 (2018)</h3>
+                    <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 15.000,00</p>
+                    <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
+                    <p class="preco-execucao">R$ 2.200,00</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 2.200,00.** Frete a ser calculado.</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="seguranca" class="container">
-            <h2>BLINDAGEM JURÍDICA GMAC/BV</h2>
-            <div class="passos-grid">
-                 <div class="passo-card">
-                    <h3><i class="fas fa-check-circle text-success"></i> QUITAÇÃO E CERTIDÃO LEGAL</h3>
-                    <p>O Pacto vale como Certidão de Liquidação de Dívida e Gravame, **eliminando qualquer ônus do seu nome**.</p>
-                </div>
-                <div class="passo-card">
-                    <h3><i class="fas fa-file-contract text-primary"></i> LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
-                    <p>Veículo entregue com Recibo em Branco e IPVA/Licenciamento 2025 Pago. **Zero dívidas antigas, zero surpresas.**</p>
-                </div>
-                <div class="passo-card">
-                    <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
-                    <p>A Logística Blindada GMAC garante que você só paga o valor total **após a conferência visual na entrega**.</p>
-                </div>
-            </div>
-            
-            <div class="clausula-alerta">
-                <h4><i class="fas fa-exclamation-triangle"></i> COMPROMISSO E CLÁUSULA DE RESCISÃO</h4>
-                <p>A confirmação do despacho estabelece um compromisso jurídico formalizado em Pacto.</p>
-                <p class="mb-0">
-                    Em casos de desistência injustificada ou recusa de pagamento do valor total (Ativo + Frete) no ato da entrega (após inspeção e aceite), o cliente estará sujeito a uma **multa compensatória de 30% sobre o valor total do frete**. Esta cláusula visa cobrir custos logísticos de retorno e reestocagem.
-                </p>
-            </div>
-        </section>
+        <section id="seguranca" class="container">
+            <h2>BLINDAGEM JURÍDICA GMAC/BV</h2>
+            <div class="passos-grid">
+                 <div class="passo-card">
+                    <h3><i class="fas fa-check-circle text-success"></i> QUITAÇÃO E CERTIDÃO LEGAL</h3>
+                    <p>O Pacto vale como Certidão de Liquidação de Dívida e Gravame, **eliminando qualquer ônus do seu nome**.</p>
+                </div>
+                <div class="passo-card">
+                    <h3><i class="fas fa-file-contract text-primary"></i> LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
+                    <p>Veículo entregue com Recibo em Branco e IPVA/Licenciamento 2025 Pago. **Zero dívidas antigas, zero surpresas.**</p>
+                </div>
+                <div class="passo-card">
+                    <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
+                    <p>A Logística Blindada GMAC garante que você só paga o **valor do ativo** **após a conferência visual na entrega** (o frete é pago antecipadamente).</p>
+                </div>
+            </div>
+            
+            <div class="clausula-alerta">
+                <h4><i class="fas fa-exclamation-triangle"></i> COMPROMISSO E CLÁUSULA DE RESCISÃO</h4>
+                <p>A confirmação do despacho estabelece um compromisso jurídico formalizado em Pacto.</p>
+                <p class="mb-0">
+                    Em casos de desistência injustificada ou recusa de pagamento do **valor do ativo** no ato da entrega (após inspeção e aceite), o cliente estará sujeito a uma **multa compensatória de 30% sobre o valor do frete já pago**, pois o frete é antecipado e cobre custos logísticos de retorno e reestocagem.
+                </p>
+            </div>
+        </section>
 
-        <section id="iniciar-cadastro" class="container">
-            <h2>GARANTA SUA MOTO - CADASTRO RÁPIDO</h2>
-            <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto 2em auto;">Preencha seus dados para que nosso agente William Fialho possa iniciar seu processo e emitir seu Pacto de Execução com o pagamento total na entrega, após sua inspeção.</p>
+        <section id="iniciar-cadastro" class="container">
+            <h2>GARANTA SUA MOTO - CADASTRO RÁPIDO</h2>
+            <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto 2em auto;">Preencha seus dados para que nosso agente William Fialho possa iniciar seu processo e emitir seu Pacto de Execução. **O frete é pago antecipadamente e o valor do ativo na entrega**, após sua inspeção.</p>
 
-            <div class="form-card" style="background-color: var(--cor-fundo-card); padding: 30px; border-radius: 8px; box-shadow: var(--sombra-chique);">
-                <form id="cadastroMotoForm">
-                    <div class="form-group mb-3">
-                        <label for="nomeCompleto">Nome Completo:</label>
-                        <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="dataNascimento">Data de Nascimento:</label>
-                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="enderecoCompleto">Endereço Completo (Rua, Nº, Complemento, Bairro, Cidade, Estado):</label>
-                        <input type="text" class="form-control" id="enderecoCompleto" name="enderecoCompleto" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cep">CEP:</label>
-                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group mb-4">
-                        <label for="whatsapp">WhatsApp (com DDD):</label>
-                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
-                    </div>
-                    <button type="submit" class="cta-header w-100">ENVIAR DADOS E INICIAR MINHA EXECUÇÃO</button>
-                </form>
-            </div>
-        </section>
-        <section id="contato" class="container">
-            <h2>EXECUÇÃO IMEDIATA É O NOSSO MANDATO</h2>
-            <p>As oportunidades são **limitadas pelo estoque de execução**. O Agente William Fialho está pronto para a finalização.</p>
-            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="whatsapp-btn">
-                FALE COM O AGENTE (WILLIAM FIALHO)
-            </a>
-            <p style="margin-top: 30px; font-size: 0.9em; color: white;">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
-        </section>
-    </main>
+            <div class="form-card" style="background-color: var(--cor-fundo-card); padding: 30px; border-radius: 8px; box-shadow: var(--sombra-chique);">
+                <form id="cadastroMotoForm">
+                    <div class="form-group mb-3">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="enderecoCompleto">Endereço Completo (Rua, Nº, Complemento, Bairro, Cidade, Estado):</label>
+                        <input type="text" class="form-control" id="enderecoCompleto" name="enderecoCompleto" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="cep">CEP:</label>
+                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="whatsapp">WhatsApp (com DDD):</label>
+                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
+                    </div>
+                    <button type="submit" class="cta-header w-100">ENVIAR DADOS E INICIAR MINHA EXECUÇÃO</button>
+                </form>
+            </div>
+        </section>
+        <section id="contato" class="container">
+            <h2>EXECUÇÃO IMEDIATA É O NOSSO MANDATO</h2>
+            <p>As oportunidades são **limitadas pelo estoque de execução**. O Agente William Fialho está pronto para a finalização.</p>
+            <a href="https://wa.me/message/T5BFWHRI4QKVA1" target="_blank" class="whatsapp-btn">
+                FALE COM O AGENTE (WILLIAM FIALHO)
+            </a>
+            <p style="margin-top: 30px; font-size: 0.9em; color: white;">Horário Executivo: Segunda a Sexta, 08h às 18h.</p>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
-            <p>Telefone Fixo: <strong>(14) 3197-4294</strong></p>
-            <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: R. Fortunato Resta, 11-35 - Jardim Jussara, Bauru - SP, 17050-040</p>
-            <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento do **Valor Total (Ativo + Frete)** é feito **no ato da entrega**, após sua conferência visual. **NÃO HÁ PARCELAMENTO FINANCEIRO.**</p>
-            <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
-        </div>
-    </footer>
+    <footer>
+        <div class="container">
+            <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
+            <p>Telefone Fixo: <strong>(14) 3197-4294</strong></p>
+            <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: R. Fortunato Resta, 11-35 - Jardim Jussara, Bauru - SP, 17050-040</p>
+            <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento do **frete é antecipado** para cobrir custos de logística e documentação. O **valor do ativo** é feito **no ato da entrega**, após sua conferência visual. **NÃO HÁ PARCELAMENTO FINANCEIRO.**</p>
+            <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
+        </div>
+    </footer>
 
-    <script>
-        document.getElementById('cadastroMotoForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+    <script>
+        document.getElementById('cadastroMotoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
 
-            const nome = document.getElementById('nomeCompleto').value;
-            const cpf = document.getElementById('cpf').value;
-            const dataNascimento = document.getElementById('dataNascimento').value;
-            const endereco = document.getElementById('enderecoCompleto').value;
-            const cep = document.getElementById('cep').value;
-            const email = document.getElementById('email').value;
-            const whatsapp = document.getElementById('whatsapp').value;
+            const nome = document.getElementById('nomeCompleto').value;
+            const cpf = document.getElementById('cpf').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const endereco = document.getElementById('enderecoCompleto').value;
+            const cep = document.getElementById('cep').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
 
-            // NÚMERO DE WHATSAPP DE WILLIAM FIALHO - CORRIGIDO
-            const numeroWilliamFialho = '5511970512149'; 
+            // NÚMERO DE WHATSAPP DE WILLIAM FIALHO - CORRIGIDO
+            const numeroWilliamFialho = '5511970512149'; 
 
-            // Mensagem pré-formatada para enviar ao William Fialho
-            const mensagem = `*NOVO CADASTRO DO SITE - CLIENTE INTERESSADO:*\n\n` +
-                             `*Nome:* ${nome}\n` +
-                             `*CPF:* ${cpf}\n` +
-                             `*Data Nasc.:* ${dataNascimento}\n` +
-                             `*Endereço:* ${endereco}\n` +
-                             `*CEP:* ${cep}\n` +
-                             `*E-mail:* ${email}\n` +
-                             `*WhatsApp do Cliente:* ${whatsapp}\n\n` +
-                             `_Pronto para o Pacto e pagamento total na entrega!_`;
+            // Mensagem pré-formatada para enviar ao William Fialho
+            const mensagem = `*NOVO CADASTRO DO SITE - CLIENTE INTERESSADO:*\n\n` +
+                             `*Nome:* ${nome}\n` +
+                             `*CPF:* ${cpf}\n` +
+                             `*Data Nasc.:* ${dataNascimento}\n` +
+                             `*Endereço:* ${endereco}\n` +
+                             `*CEP:* ${cep}\n` +
+                             `*E-mail:* ${email}\n` +
+                             `*WhatsApp do Cliente:* ${whatsapp}\n\n` +
+                             `_Pronto para o Pacto! Frete pago antecipadamente e valor do ativo na entrega._`;
 
-            // Codifica a mensagem para URL
-            const mensagemCodificada = encodeURIComponent(mensagem);
+            // Codifica a mensagem para URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
 
-            // Abre o WhatsApp com a mensagem pré-preenchida
-            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada}`, '_blank');
-            
-            alert('Seus dados foram enviados! William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra.');
-            this.reset(); // Limpa o formulário após o envio
-        });
-    </script>
-</body>
-</html>
-
-
-
+            // Abre o WhatsApp com a mensagem pré-preenchida
+            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada
