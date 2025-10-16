@@ -326,7 +326,7 @@
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 12.000,00</p>
                     <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
                     <p class="preco-execucao">R$ 1.600,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.600,00.** Frete a ser calculado.</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 1.600,00.** Frete pago antecipadamente.</p>
                 </div>
 
                 <div class="ativo-card">
@@ -334,7 +334,7 @@
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 8.500,00</p>
                     <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
                     <p class="preco-execucao">R$ 1.400,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 1.400,00.** Frete a ser calculado.</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 1.400,00.** Frete pago antecipadamente.</p>
                 </div>
 
                 <div class="ativo-card">
@@ -342,7 +342,7 @@
                     <p class="preco-mercado">VALOR DE MERCADO (FIPE): R$ 15.000,00</p>
                     <p style="color: var(--cor-texto-claro);">VALOR DO ATIVO GMAC</p>
                     <p class="preco-execucao">R$ 2.200,00</p>
-                    <p class="obs">**VALOR DO ATIVO: R$ 2.200,00.** Frete a ser calculado.</p>
+                    <p class="obs">**VALOR DO ATIVO: R$ 2.200,00.** Frete pago antecipadamente.</p>
                 </div>
             </div>
         </section>
@@ -360,7 +360,7 @@
                 </div>
                 <div class="passo-card">
                     <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
-                    <p>A Logística Blindada GMAC garante que você só paga o **valor do ativo** **após a conferência visual na entrega** (o frete é pago antecipadamente).</p>
+                    <p>A Logística Blindada GMAC garante que você só paga o **valor do ativo após a conferência visual na entrega** (o frete é pago antecipadamente).</p>
                 </div>
             </div>
             
@@ -461,4 +461,11 @@
             const mensagemCodificada = encodeURIComponent(mensagem);
 
             // Abre o WhatsApp com a mensagem pré-preenchida
-            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada
+            window.open(`https://api.whatsapp.com/send?phone=${numeroWilliamFialho}&text=${mensagemCodificada}`, '_blank');
+            
+            alert('Seus dados foram enviados! William Fialho entrará em contato via WhatsApp em breve para formalizar a sua compra e passar os detalhes do frete antecipado.');
+            this.reset(); // Limpa o formulário após o envio
+        });
+    </script>
+</body>
+</html>
