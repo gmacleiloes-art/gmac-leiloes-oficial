@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMAC EXECUÇÃO DE ATIVOS | BV FINANCEIRA - LIQUIDAÇÃO IMEDIATA</title>
-    <meta name="description" content="GMAC LEILÕES: agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
+    <meta name="description" content="GMAC LEILÕES: Agente exclusivo da BV Financeira para execução e liquidação de passivos veiculares. Ativos 100% quitados, processo legal e transparente.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* variáveis de cor - tema gold executivo */
@@ -42,13 +42,13 @@
             color: var(--cor-secundaria-bv);
         }
 
-        h1 { font-size: 3.2em; margin-bottom: 0.5em; color: var(--cor-principal); }
-        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
-        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-secundaria-bv); }
+        h1 { font-size: 3.2em; margin-bottom: 0.5em; color: var(--cor-principal); text-transform: uppercase; }
+        h2 { font-size: 2.5em; text-align: center; margin-bottom: 1.2em; color: var(--cor-destaque-gold); text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); text-transform: uppercase; }
+        h3 { font-size: 1.8em; margin-bottom: 0.8em; color: var(--cor-secundaria-bv); text-transform: uppercase; }
 
         p { margin-bottom: 1em; }
 
-        /* header - o mÓdulo de autoridade gold */
+        /* header - o módulo de autoridade gold */
         header {
             background-color: var(--cor-fundo-card); 
             color: var(--cor-principal);
@@ -73,12 +73,13 @@
             color: white;
             padding: 18px 40px;
             margin-top: 30px;
-            border-radius: 25px; /* botÕes arredondados */
+            border-radius: 25px; /* botões arredondados */
             font-size: 1.4em;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.2s;
             box-shadow: var(--sombra-chique);
             text-decoration: none; /* remover sublinhado padrão do link */
+            text-transform: uppercase;
         }
 
         .cta-header:hover {
@@ -186,6 +187,7 @@
             margin-bottom: 5px;
             font-weight: bold;
             color: var(--cor-secundaria-bv);
+            text-transform: capitalize;
         }
         .form-control {
             width: 100%;
@@ -228,13 +230,14 @@
             background-color: var(--cor-destaque-gold); /* dourado */
             color: white;
             padding: 18px 40px;
-            border-radius: 25px; /* botÕes arredondados */
+            border-radius: 25px; /* botões arredondados */
             font-size: 1.5em;
             font-weight: bold;
             margin-top: 30px;
             box-shadow: var(--sombra-chique);
             transition: background-color 0.3s ease;
             text-decoration: none; /* remover sublinhado padrão do link */
+            text-transform: uppercase;
         }
 
         .whatsapp-btn:hover {
@@ -260,8 +263,32 @@
             color: var(--cor-texto-claro);
         }
 
+        .footer-protocol {
+            margin-top: 15px;
+            color: white;
+            font-weight: bold; /* Adicionado para destacar */
+            line-height: 1.5; /* Melhorar leitura */
+        }
+
+        .mapa-sede {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .mapa-sede h3 {
+            color: var(--cor-destaque-gold);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .mapa-sede iframe {
+            border-radius: 8px;
+            box-shadow: var(--sombra-chique);
+            max-width: 100%;
+            border: 1px solid var(--cor-destaque-gold);
+        }
+
+
         /* responsividade */
-        @media (max-width: 768px) { /* Adicionado @ para corrigir o media query */
+        @media (max-width: 768px) {
             h1 { font-size: 2.5em; }
             h2 { font-size: 2em; }
             header p { font-size: 1.2em; }
@@ -289,7 +316,7 @@
         <section id="quem-somos" class="container">
             <h2>DOMÍNIO E TRANSPARÊNCIA NA LIQUIDAÇÃO</h2>
             <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto 1.5em auto;">A **GMAC EXECUÇÃO DE ATIVOS** é o braço de liquidação rápida da **BV FINANCEIRA**. Nosso mandato é claro: **quitar e repassar ativos** (veículos com dívidas resolvidas) diretamente ao mercado, eliminando intermediários e burocracia. Não é leilão tradicional. É **execução direta**. Por isso, o preço é **irrefutável**.</p>
-            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
+            <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto; color: var(--cor-alerta); font-weight: bold;">ATENÇÃO: Todos os ativos são entregues 100% quitados, livres de débitos ou gravames. O processo é auditado e validado pela BV Financeira.</p>
         </section>
 
         <section id="como-funciona" class="container">
@@ -323,7 +350,7 @@
             <div class="grid-ativos">
                 <div class="ativo-card">
                     <h3>HONDA BIZ 125 (2022/2023)</h3>
-                    <p class="preco-mercado">Valor de mercado (FIPE): R$ 12.000,00</p>
+                    <p class="preco-mercado">Valor de Mercado (FIPE): R$ 12.000,00</p>
                     <p style="color: var(--cor-texto-claro);">Valor do Ativo GMAC</p>
                     <p class="preco-execucao">R$ 1.600,00</p>
                     <p class="obs">**Valor do Ativo: R$ 1.600,00.** Frete pago antecipadamente.</p>
@@ -331,7 +358,7 @@
 
                 <div class="ativo-card">
                     <h3>HONDA POP 110 (2021)</h3>
-                    <p class="preco-mercado">Valor de mercado (FIPE): R$ 8.500,00</p>
+                    <p class="preco-mercado">Valor de Mercado (FIPE): R$ 8.500,00</p>
                     <p style="color: var(--cor-texto-claro);">Valor do Ativo GMAC</p>
                     <p class="preco-execucao">R$ 1.400,00</p>
                     <p class="obs">**Valor do Ativo: R$ 1.400,00.** Frete pago antecipadamente.</p>
@@ -339,7 +366,7 @@
 
                 <div class="ativo-card">
                     <h3>YAMAHA FAZER YS 250 (2018)</h3>
-                    <p class="preco-mercado">Valor de mercado (FIPE): R$ 15.000,00</p>
+                    <p class="preco-mercado">Valor de Mercado (FIPE): R$ 15.000,00</p>
                     <p style="color: var(--cor-texto-claro);">Valor do Ativo GMAC</p>
                     <p class="preco-execucao">R$ 2.200,00</p>
                     <p class="obs">**Valor do Ativo: R$ 2.200,00.** Frete pago antecipadamente.</p>
@@ -351,15 +378,15 @@
             <h2>BLINDAGEM JURÍDICA GMAC/BV</h2>
             <div class="passos-grid">
                     <div class="passo-card">
-                        <h3><i class="fas fa-check-circle text-success"></i> QUITAÇÃO E CERTIDÃO LEGAL</h3>
+                        <h3><i class="fas fa-check-circle" style="color: #28a745;"></i> QUITAÇÃO E CERTIDÃO LEGAL</h3>
                         <p>O pacto vale como certidão de liquidação de dívida e gravame, **eliminando qualquer ônus do seu nome**.</p>
                     </div>
                     <div class="passo-card">
-                        <h3><i class="fas fa-file-contract text-primary"></i> LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
+                        <h3><i class="fas fa-file-contract" style="color: #007bff;"></i> LEGALIDADE E DOCUMENTAÇÃO PERFEITA</h3>
                         <p>Veículo entregue com recibo em branco e IPVA/Licenciamento 2025 pago. **Zero dívidas antigas, zero surpresas.**</p>
                     </div>
                     <div class="passo-card">
-                        <h3><i class="fas fa-truck-moving text-warning"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
+                        <h3><i class="fas fa-truck-moving" style="color: #ffc107;"></i> ENTREGA SEGURA E RASTREÁVEL</h3>
                         <p>A logística blindada GMAC garante que você só paga o **valor do ativo após a conferência visual na entrega** (o frete é pago antecipadamente).</p>
                     </div>
             </div>
@@ -426,7 +453,16 @@
             <p><strong>GMAC EXECUÇÃO DE ATIVOS</strong> - CNPJ: <strong>52.654.051/0001-30</strong></p>
             <p>Telefone Fixo: <strong>(14) 3197-4294</strong></p>
             <p>Agente de Liquidação Exclusivo BV Financeira | Sede Administrativa: R. Fortunato Resta, 11-35 - Jardim Jussara, Bauru - SP, 17050-040</p>
-            <p style="margin-top: 15px; color: white;">**PROTOCOLO FINANCEIRO:** O pagamento do **frete é antecipado** para cobrir custos de logística e documentação. O **valor do ativo** é feito **no ato da entrega**, após sua conferência visual. **NÃO HÁ PARCELAMENTO FINANCEIRO.**</p>
+            
+            <div class="mapa-sede">
+                <h3>NOSSA LOCALIZAÇÃO</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.98687790351!2d-49.07920372370717!3d-22.348639538805004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf6520f92a3469%3A0xc47e30349a3765e!2sR.%20Fortunato%20Resta%2C%2011-35%20-%20Jardim%20Jussara%2C%20Bauru%20-%20SP%2C%2017050-040!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <p class="footer-protocol">
+                **PROTOCOLO FINANCEIRO:** O pagamento do **frete é antecipado** para cobrir custos de logística e documentação. O **valor do ativo** é feito **no ato da entrega**, após sua conferência visual. **NÃO HÁ PARCELAMENTO FINANCEIRO.**
+            </p>
             <p>&copy; 2024 GMAC EXECUÇÃO DE ATIVOS. Todos os direitos de liquidação reservados.</p>
         </div>
     </footer>
@@ -443,10 +479,10 @@
             const email = document.getElementById('email').value;
             const whatsapp = document.getElementById('whatsapp').value;
 
-            // nÚmero de whatsapp de william fialho - corrigido
+            // Número de WhatsApp de William Fialho
             const numerowilliamfialho = '5511970512149'; 
 
-            // mensagem pré-formatada para enviar ao william fialho
+            // mensagem pré-formatada para enviar ao William Fialho
             const mensagem = `*Novo Cadastro do Site - Cliente Interessado:*\n\n` +
                              `*Nome:* ${nome}\n` +
                              `*CPF:* ${cpf}\n` +
